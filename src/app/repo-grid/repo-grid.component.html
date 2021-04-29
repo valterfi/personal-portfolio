@@ -1,0 +1,16 @@
+<!--https://material.angular.io/components/grid-list/overview-->
+<!--https://material.io/design/components/image-lists.html-->
+<!--https://tburleson-layouts-demos.firebaseapp.com/#/docs-->
+<div class="spacer"></div>
+<!-- WARNING: rowHeight, not rowheight -->
+<mat-grid-list cols="3" rowHeight="3:2" gutterSize="0.4em">
+
+  <ng-container>
+      <mat-grid-tile *ngFor="let repo of rootObject">
+        <a class="mat-grid-tile" href="{{repo.html_url}}" target="_blank">
+          <img src="assets/photos/github-logo.jpg" alt="facelift" class="fill-available-space" />
+          <mat-grid-tile-footer>{{repo.name}}</mat-grid-tile-footer>
+        </a>
+      </mat-grid-tile>
+  </ng-container>
+</mat-grid-list>
